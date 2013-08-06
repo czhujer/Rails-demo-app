@@ -1,0 +1,22 @@
+<%= render 'admin/header' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @admin_news.id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_news.name %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @admin_news.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_news_path(@admin_news) %> |
+<%= link_to 'Back', admin_news_index_path %>

@@ -1,0 +1,27 @@
+<%= render 'admin/header' %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @admin_post.name %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @admin_post.category_id %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @admin_post.content %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%= @admin_post.order %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_post_path(@admin_post) %> |
+<%= link_to 'Back', admin_posts_path %>

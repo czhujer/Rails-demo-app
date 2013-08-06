@@ -1,0 +1,43 @@
+
+        <hr class="noscreen" />
+
+        <div id="header">
+            <div class="wrap">
+
+                <!-- Logo start -->
+                  <a id="logo" href="/admin" title="mainlogo">HHV - Administrace webu</a>
+                <!-- Logo end -->
+
+                <hr class="noscreen noprint" />
+
+                <!-- Navigation start -->
+                <strong class="noscreen noprint">Navigace:</strong>
+                <ul id="nav">
+
+                    <li>
+                      <%= link_to "Categories", admin_categories_path %>
+            	    </li>
+                    <li>
+                      <%= link_to "Posts", admin_posts_path %>
+            	    </li>    	    
+                    <li>
+                      <%= link_to "News", admin_news_index_path %>
+            	    </li>
+            	    
+            	    <li>
+                      <%= link_to "Main web", show_index_path  %>
+            	    </li>
+            
+            	    <li>
+                      <%= link_to "Administration", "http://hhv.hujer.info/admin" %>
+            	    </li>
+            
+            	    <li>
+                      <%= button_to "Logout", logout_path, :method => :delete %>
+            	    </li>
+            	    
+                </ul>
+                <!-- Navigation end -->
+            </div>
+        </div>
+        

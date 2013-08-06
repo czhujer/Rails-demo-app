@@ -1,0 +1,31 @@
+      <strong class="title"><span>Novinky</span></strong>
+    
+        <!-- Cols start -->
+            <ul class="cols clearfix">
+
+		<%
+		  $i = 0
+		  @news.each do |new| 
+
+		    if ($i == 1) then
+		%>
+		 <li class="center" >
+		<% else %>
+		 <li>
+		<%
+		    end
+		    
+		    $i += 1
+		%>
+                   <h2><%= new.name %></h2>
+                   <p>
+                     <%= truncate(new.content, :length => 170) %>
+                   </p>
+                   <%= link_to "Více", show_news_path(new.id), :class => "more" %>
+                  </li>
+
+                 <% end %>
+        
+            </ul>
+          <!-- cols end -->
+

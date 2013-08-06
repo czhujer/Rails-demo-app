@@ -1,0 +1,24 @@
+
+  <%= render 'show/main_banner' %>
+          
+        <div class="wrap">
+
+          <%= render 'show/news' %>
+            
+            <strong class="title"><span>Informace</span></strong>
+            
+            <% @news_main.each do |new| %>
+            
+              <h2><%= new.name %></h2>
+        
+              <p>created: <%= new.created_at %> </p>
+            
+              <p><%= new.content %></p>
+                
+            <% end %>
+                        
+        </div>
+
+  <%= render 'show/header' %>
+      
+  <%= render 'show/footer' %>

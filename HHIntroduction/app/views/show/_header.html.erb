@@ -1,0 +1,31 @@
+
+        <hr class="noscreen" />
+
+        <div id="header">
+            <div class="wrap">
+
+                <!-- Logo start -->
+                  <a id="logo" href="/" title="mainlogo">Hujerovo <strong>:pokusny</strong> Hosting</a>
+                <!-- Logo end -->
+
+                <hr class="noscreen noprint" />
+
+                <!-- Navigation start -->
+                <strong class="noscreen noprint">Navigace:</strong>
+                <ul id="nav">
+                  <% @categories.each do |category| %>
+
+                    <li>
+                    <%= 
+                	#link_to category.name, [:show, category] 
+            		link_to category.name, show_category_posts_path(category)
+            		
+            	    %>
+            	    </li>
+                  <% end %>
+                  
+                </ul>
+                <!-- Navigation end -->
+            </div>
+        </div>
+        
